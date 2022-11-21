@@ -23,6 +23,7 @@ public class BaseTest {
         wdm = WebDriverManager.chromedriver().browserInDocker()
                 .enableVnc().enableRecording();
         driver = wdm.create();
+        driver.get(baseUrl);
     }
 
     @AfterSuite
