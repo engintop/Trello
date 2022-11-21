@@ -11,19 +11,24 @@ public class BaseTest {
     public String baseUrl = "https://trello.com/";
 
     public static WebDriver driver ;
+    WebDriverManager wdm;
 
     @BeforeSuite
     public void initializeDriver()  {
 
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.get(baseUrl);
 
+        /*WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        driver.get(baseUrl);*/
+        wdm = WebDriverManager.chromedriver().browserInDocker()
+                .enableVnc().enableRecording();
+        driver = wdm.create();
     }
 
     @AfterSuite
     public void closeDriver() {
-        driver.quit();
+       // driver.quit();
+        wdm.quit();
     }
 
 
