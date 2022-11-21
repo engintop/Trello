@@ -76,6 +76,7 @@ public class MainPage extends BasePageUtil {
             click(BOARD_MENU_MORE_BTN);
             click(CLOSE_BOARD);
             click(CLOSE_BOARD_BTN);
+            waitSeconds(1);
             click(DELETE_BOARD);
             click(DELETE_BOARD_CONFIRM);
             waitUntilElementVisible(CREATE_FIRST_BOARD_BTN);

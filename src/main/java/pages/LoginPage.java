@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import util.BasePageUtil;
+import util.Log;
 
 public class LoginPage extends BasePageUtil {
 
@@ -19,9 +20,8 @@ public class LoginPage extends BasePageUtil {
     public By LOGIN_BTN = By.xpath("//a[@data-uuid=\"MJFtCCgVhXrVl7v9HA7EH_login\"]");
 
 
-
-
     public void login(String email , String password){
+
         click(LOGIN_BTN);
         sendKeys(LOGIN_EMAIL , email);
         click(LOGIN_EMAIL_BTN);

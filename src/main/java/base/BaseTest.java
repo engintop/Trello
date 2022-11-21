@@ -31,7 +31,4 @@ public class BaseTest {
        // driver.quit();
         wdm.quit();
     }
-
-
-
 }

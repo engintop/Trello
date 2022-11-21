@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.MainPage;
+import util.Log;
 
 public class CreateBoardTest extends BaseTest {
 
@@ -26,19 +27,24 @@ public class CreateBoardTest extends BaseTest {
 
     @BeforeMethod
     public void login(){
+        Log.info("Step 1 : Login with valid account");
         loginPage
                 .login(EMAIL,PASSWORD);
     }
 
-    @Test(priority=1)
+    @Test(priority=1 , description = "Create Board From Header Menu")
     public void createBoardFromHeaderButton() {
+        Log.startLog("Create Board From Header Menu");
+        Log.info("Step 2 : Create board from header menu");
         mainPage
                 .clickCreateBtn()
                 .createBoardFromHeaderMenu(BOARD_NAME);
     }
 
-    @Test(priority=2)
+    @Test(priority=2 , description = "Create Board From Boards Option")
     public void createBoardFromBoardsButton() {
+        Log.endLog("Create Board From Header Menu");
+        Log.info("Step 2 : Create board from boards option");
         mainPage
                 .clickCreateBtn()
                 .createBoardFromBoardsMenu(BOARD_NAME);
@@ -47,6 +53,7 @@ public class CreateBoardTest extends BaseTest {
 
     @AfterMethod
     public void cleanup(ITestResult result){
+        Log.info("Clean up starting...");
         mainPage
                 .deleteBoard(BOARD_NAME)
                 .logout();
