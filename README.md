@@ -12,7 +12,7 @@ After import the project on your local. You can run with using maven commands. Y
 # UI 
 1. Create board from header menu (Create button)
 2. Create board from boards option
-#API
+# API
 1. Create and delete board. (Include 2 request api)
 
 
