@@ -4,5 +4,6 @@
 <suite name="Run Test Suite">
     <suite-files>
         <suite-file path="CreateBoard.xml"/>
+        <suite-file path="ApiCreateBoard.xml"/>
     </suite-files>
 </suite>
