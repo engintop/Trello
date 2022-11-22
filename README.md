@@ -1,6 +1,6 @@
 # Trello
 # test-automation-create-delete-board
-Java Trello project for test automation covering UI acceptance, API acceptance testing.
+Java Trello project for test automation covering UI and API testing.
 
 # How to run tests
 After import the project on your local. You can run with using maven commands. You can write the below command on the terminal.
