@@ -3,7 +3,7 @@
 Java Trello project for test automation covering UI and API testing.
 
 # How to run tests
-After import the project on your local. You can run with using maven commands. You can write the below command on the terminal.
+After import the project on your local. You can run with using maven commands. You can write the following command on the terminal.
 "mvn clean test -Dsurefire.suiteXmlFiles=RunTest.xml"
 
 
