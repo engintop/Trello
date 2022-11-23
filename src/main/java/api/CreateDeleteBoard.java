@@ -29,7 +29,7 @@ public class CreateDeleteBoard extends BaseTestApi {
 
 
         String boardId = response.jsonPath().getString("id");
-        Log.info("memberId  :     "+boardId);
+        Log.info("boardId  :     "+boardId);
         return boardId ;
 
 
